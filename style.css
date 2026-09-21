@@ -1,3 +1,8 @@
+/* =====================================================
+   LIBRARY MANAGEMENT SYSTEM
+   GLOBAL STYLE
+   ===================================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +12,13 @@ body {
     font-family: Arial, sans-serif;
     background: #f4f7fb;
     color: #172033;
+    line-height: 1.6;
 }
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
 
 header {
     background: #0b2d4d;
@@ -17,23 +28,45 @@ header {
 
 header h1 {
     margin: 0 0 15px 0;
+    font-size: 26px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-right: 15px;
+    font-weight: 500;
 }
 
 nav a:hover {
     color: #f59e0b;
 }
 
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
 main {
     width: 90%;
     max-width: 1200px;
     margin: 35px auto;
 }
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
     background: #1976b8;
@@ -44,7 +77,13 @@ main {
 
 .hero h2 {
     font-size: 40px;
+    margin-top: 0;
 }
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
 
 .button {
     display: inline-block;
@@ -53,7 +92,17 @@ main {
     padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: bold;
 }
+
+.button:hover {
+    background: #d97706;
+}
+
+
+/* =====================================================
+   DASHBOARD
+   ===================================================== */
 
 .dashboard {
     display: grid;
@@ -69,16 +118,43 @@ main {
     box-shadow: 0 5px 15px #0002;
 }
 
+.card h3 {
+    margin-top: 0;
+    color: #0b2d4d;
+}
+
 .card p {
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 0;
 }
+
+
+/* =====================================================
+   GENERAL CONTENT SECTION
+   ===================================================== */
 
 .content {
     background: white;
     padding: 30px;
     border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px #0001;
 }
+
+.content h2 {
+    color: #0b2d4d;
+    margin-top: 0;
+}
+
+.content h3 {
+    color: #0b5a8f;
+}
+
+
+/* =====================================================
+   DASHBOARD FEATURES
+   ===================================================== */
 
 .features {
     display: grid;
@@ -90,27 +166,17 @@ main {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
+    background: #f9fbfd;
 }
 
 .feature h3 {
     color: #0b5a8f;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #666;
-}
 
-@media (max-width: 800px) {
-    .dashboard {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .features {
-        grid-template-columns: 1fr;
-    }
-}
+/* =====================================================
+   SEARCH BOX
+   ===================================================== */
 
 .search-box {
     display: flex;
@@ -123,6 +189,7 @@ footer {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
+    font-size: 15px;
 }
 
 .search-box button {
@@ -138,10 +205,21 @@ footer {
     background: #0b5a8f;
 }
 
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background: white;
 }
 
 th {
@@ -160,9 +238,10 @@ tr:hover {
     background: #f4f7fb;
 }
 
-/* =========================
+
+/* =====================================================
    BORROWING PROCESS
-========================= */
+   ===================================================== */
 
 .process {
     display: flex;
@@ -212,9 +291,9 @@ tr:hover {
 }
 
 
-/* =========================
+/* =====================================================
    BORROWING STATUS
-========================= */
+   ===================================================== */
 
 .status {
     display: inline-block;
@@ -240,46 +319,9 @@ tr:hover {
 }
 
 
-/* =========================
-   TABLE
-========================= */
-
-.table-container {
-    overflow-x: auto;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-.content + .content {
-    margin-top: 30px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 900px) {
-
-    .process {
-        flex-direction: column;
-    }
-
-    .process-arrow {
-        transform: rotate(90deg);
-    }
-
-    .process-step {
-        width: 220px;
-    }
-}
-
-/* =========================
-   RESERVATION PAGE
-========================= */
+/* =====================================================
+   RESERVATION PROCESS
+   ===================================================== */
 
 .reservation-process {
     display: flex;
@@ -328,6 +370,11 @@ tr:hover {
     color: #1976b8;
 }
 
+
+/* =====================================================
+   RESERVATION STATUS
+   ===================================================== */
+
 .reservation-status {
     display: inline-block;
     padding: 6px 12px;
@@ -351,6 +398,11 @@ tr:hover {
     color: #15803d;
 }
 
+
+/* =====================================================
+   RESERVATION INFORMATION
+   ===================================================== */
+
 .reservation-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -367,24 +419,221 @@ tr:hover {
 
 .info-box h3 {
     color: #0b5a8f;
+    margin-top: 0;
 }
+
+
+/* =====================================================
+   FINE PROCESS
+   ===================================================== */
+
+.fine-process {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.fine-step {
+    background: white;
+    border: 2px solid #1976b8;
+    border-radius: 12px;
+    width: 180px;
+    min-height: 130px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px #0001;
+}
+
+.fine-number {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    border-radius: 50%;
+    background: #1976b8;
+    color: white;
+    font-weight: bold;
+}
+
+.fine-icon {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.fine-step strong {
+    display: block;
+    color: #0b2d4d;
+}
+
+.fine-arrow {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1976b8;
+}
+
+
+/* =====================================================
+   FINE STATUS
+   ===================================================== */
+
+.fine-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.fine-status.unpaid {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.fine-status.paid {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* =====================================================
+   FINE SUMMARY
+   ===================================================== */
+
+.fine-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fine-card {
+    background: #f9fbfd;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.fine-card h3 {
+    margin-top: 0;
+    color: #0b2d4d;
+}
+
+.fine-card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1976b8;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+
+/* =====================================================
+   MOBILE / TABLET
+   ===================================================== */
 
 @media (max-width: 900px) {
 
-    .reservation-process {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .process,
+    .reservation-process,
+    .fine-process {
         flex-direction: column;
     }
 
-    .reservation-arrow {
+    .process-arrow,
+    .reservation-arrow,
+    .fine-arrow {
         transform: rotate(90deg);
+    }
+
+    .process-step {
+        width: 220px;
+    }
+
+    .reservation-step {
+        width: 220px;
+    }
+
+    .fine-step {
+        width: 220px;
     }
 
     .reservation-info {
         grid-template-columns: 1fr;
     }
 
-    .reservation-step {
-        width: 220px;
+    .fine-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 18px 4%;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
     }
 
 }
