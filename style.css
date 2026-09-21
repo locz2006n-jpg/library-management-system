@@ -276,3 +276,124 @@ tr:hover {
         width: 220px;
     }
 }
+
+/* =========================
+   RESERVATION PAGE
+========================= */
+
+.reservation-process {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.reservation-step {
+    background: white;
+    border: 2px solid #1976b8;
+    border-radius: 12px;
+    width: 170px;
+    min-height: 125px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px #0001;
+}
+
+.reservation-number {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto;
+    border-radius: 50%;
+    background: #1976b8;
+    color: white;
+    font-weight: bold;
+}
+
+.reservation-icon {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.reservation-step strong {
+    display: block;
+    color: #0b2d4d;
+}
+
+.reservation-arrow {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1976b8;
+}
+
+
+/* Reservation Status */
+
+.reservation-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.reservation-status.waiting {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.reservation-status.ready {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.reservation-status.completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+
+/* Reservation Information */
+
+.reservation-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9fbfd;
+}
+
+.info-box h3 {
+    color: #0b5a8f;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .reservation-process {
+        flex-direction: column;
+    }
+
+    .reservation-arrow {
+        transform: rotate(90deg);
+    }
+
+    .reservation-info {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-step {
+        width: 220px;
+    }
+
+}
