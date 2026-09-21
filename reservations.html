@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reservations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>📚 Library Management System</h1>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrowing.html">Borrowing</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="fines.html">Fines</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- PAGE INTRODUCTION -->
+
+    <section class="content">
+
+        <h2>🔖 Reservation Management</h2>
+
+        <p>
+            Manage book reservations and reservation status.
+        </p>
+
+    </section>
+
+
+    <!-- RESERVATION PROCESS -->
+
+    <section class="content">
+
+        <h2>Reservation Process</h2>
+
+        <div class="reservation-process">
+
+            <div class="reservation-step">
+
+                <div class="reservation-number">1</div>
+
+                <div class="reservation-icon">👤</div>
+
+                <strong>Member Requests</strong>
+
+            </div>
+
+
+            <div class="reservation-arrow">→</div>
+
+
+            <div class="reservation-step">
+
+                <div class="reservation-number">2</div>
+
+                <div class="reservation-icon">📚</div>
+
+                <strong>Check Book</strong>
+
+            </div>
+
+
+            <div class="reservation-arrow">→</div>
+
+
+            <div class="reservation-step">
+
+                <div class="reservation-number">3</div>
+
+                <div class="reservation-icon">🔖</div>
+
+                <strong>Create Reservation</strong>
+
+            </div>
+
+
+            <div class="reservation-arrow">→</div>
+
+
+            <div class="reservation-step">
+
+                <div class="reservation-number">4</div>
+
+                <div class="reservation-icon">📢</div>
+
+                <strong>Notify Member</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION RECORDS -->
+
+    <section class="content">
+
+        <h2>📋 Reservation Records</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Reservation ID</th>
+
+                        <th>Member ID</th>
+
+                        <th>Book</th>
+
+                        <th>Reservation Date</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>RS001</td>
+
+                        <td>M001</td>
+
+                        <td>Computer Networks</td>
+
+                        <td>18/09/2026</td>
+
+                        <td>
+                            <span class="reservation-status waiting">
+                                Waiting
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RS002</td>
+
+                        <td>M002</td>
+
+                        <td>Database System</td>
+
+                        <td>17/09/2026</td>
+
+                        <td>
+                            <span class="reservation-status ready">
+                                Ready
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RS003</td>
+
+                        <td>M003</td>
+
+                        <td>Java Programming</td>
+
+                        <td>15/09/2026</td>
+
+                        <td>
+                            <span class="reservation-status completed">
+                                Completed
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RS004</td>
+
+                        <td>M005</td>
+
+                        <td>Software Engineering</td>
+
+                        <td>19/09/2026</td>
+
+                        <td>
+                            <span class="reservation-status waiting">
+                                Waiting
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION STATUS -->
+
+    <section class="content">
+
+        <h2>Reservation Status</h2>
+
+        <div class="reservation-info">
+
+            <div class="info-box">
+
+                <h3>⏳ Waiting</h3>
+
+                <p>
+                    The member is waiting for the book to become available.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>📚 Ready</h3>
+
+                <p>
+                    The book is available and ready for the member.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>✅ Completed</h3>
+
+                <p>
+                    The reservation has been completed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>Library Management System © 2026</p>
+
+</footer>
+
+</body>
+
+</html>
