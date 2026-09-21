@@ -161,14 +161,14 @@ tr:hover {
 }
 
 /* =========================
-   BORROWING PAGE
+   BORROWING PROCESS
 ========================= */
 
 .process {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     margin: 25px 0;
     flex-wrap: wrap;
 }
@@ -211,9 +211,10 @@ tr:hover {
     color: #1976b8;
 }
 
-.table-container {
-    overflow-x: auto;
-}
+
+/* =========================
+   BORROWING STATUS
+========================= */
 
 .status {
     display: inline-block;
@@ -238,9 +239,28 @@ tr:hover {
     color: #dc2626;
 }
 
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    overflow-x: auto;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
 .content + .content {
     margin-top: 30px;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
 
