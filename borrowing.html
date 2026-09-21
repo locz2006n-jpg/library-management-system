@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Borrowing - Library Management System</title>
-
+    <title>Borrowing Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-
     <h1>📚 Library Management System</h1>
 
     <nav>
@@ -25,194 +21,180 @@
         <a href="fines.html">Fines</a>
         <a href="reports.html">Reports</a>
     </nav>
-
 </header>
-
 
 <main>
 
+    <!-- PAGE TITLE -->
     <section class="content">
-
         <h2>🔄 Borrowing Management</h2>
+        <p>Manage book borrowing and returning records.</p>
 
-        <p>
-            Manage book borrowing and returning records.
-        </p>
-
-
+        <!-- BORROWING PROCESS -->
         <h3>Borrowing Process</h3>
 
-        <div class="flow">
+        <div class="process">
 
-            <div class="step">
-                👤 Check Member
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div>👤</div>
+                <strong>Check Member</strong>
             </div>
 
-            <div class="arrow">
-                →
+            <div class="process-arrow">→</div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div>📚</div>
+                <strong>Check Book</strong>
             </div>
 
-            <div class="step">
-                📚 Check Book
+            <div class="process-arrow">→</div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div>✅</div>
+                <strong>Check Availability</strong>
             </div>
 
-            <div class="arrow">
-                →
+            <div class="process-arrow">→</div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div>📝</div>
+                <strong>Create Record</strong>
             </div>
 
-            <div class="step">
-                ✅ Check Availability
-            </div>
+            <div class="process-arrow">→</div>
 
-            <div class="arrow">
-                →
-            </div>
-
-            <div class="step">
-                📝 Create Record
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-            <div class="step">
-                📅 Set Due Date
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div>📅</div>
+                <strong>Set Due Date</strong>
             </div>
 
         </div>
+    </section>
 
 
-        <h3>Borrowing Records</h3>
+    <!-- BORROWING RECORDS -->
+    <section class="content">
 
-        <table>
+        <h2>📋 Borrowing Records</h2>
 
-            <thead>
+        <div class="table-container">
 
-                <tr>
-                    <th>Borrowing ID</th>
-                    <th>Member ID</th>
-                    <th>Book</th>
-                    <th>Borrow Date</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                </tr>
+            <table>
 
-            </thead>
+                <thead>
+                    <tr>
+                        <th>Borrowing ID</th>
+                        <th>Member ID</th>
+                        <th>Book</th>
+                        <th>Borrow Date</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
 
+                <tbody>
 
-            <tbody>
+                    <tr>
+                        <td>BR001</td>
+                        <td>M001</td>
+                        <td>Database System</td>
+                        <td>15/09/2026</td>
+                        <td>22/09/2026</td>
+                        <td>
+                            <span class="status borrowed">Borrowed</span>
+                        </td>
+                    </tr>
 
-                <tr>
+                    <tr>
+                        <td>BR002</td>
+                        <td>M002</td>
+                        <td>Java Programming</td>
+                        <td>12/09/2026</td>
+                        <td>19/09/2026</td>
+                        <td>
+                            <span class="status returned">Returned</span>
+                        </td>
+                    </tr>
 
-                    <td>BR001</td>
+                    <tr>
+                        <td>BR003</td>
+                        <td>M003</td>
+                        <td>Computer Networks</td>
+                        <td>10/09/2026</td>
+                        <td>17/09/2026</td>
+                        <td>
+                            <span class="status overdue">Overdue</span>
+                        </td>
+                    </tr>
 
-                    <td>M001</td>
+                    <tr>
+                        <td>BR004</td>
+                        <td>M005</td>
+                        <td>Software Engineering</td>
+                        <td>18/09/2026</td>
+                        <td>25/09/2026</td>
+                        <td>
+                            <span class="status borrowed">Borrowed</span>
+                        </td>
+                    </tr>
 
-                    <td>Database System</td>
+                </tbody>
 
-                    <td>15/09/2026</td>
+            </table>
 
-                    <td>22/09/2026</td>
+        </div>
 
-                    <td>Borrowed</td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>BR002</td>
-
-                    <td>M002</td>
-
-                    <td>Java Programming</td>
-
-                    <td>12/09/2026</td>
-
-                    <td>19/09/2026</td>
-
-                    <td>Returned</td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>BR003</td>
-
-                    <td>M003</td>
-
-                    <td>Computer Networks</td>
-
-                    <td>10/09/2026</td>
-
-                    <td>17/09/2026</td>
-
-                    <td>Overdue</td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>BR004</td>
-
-                    <td>M005</td>
-
-                    <td>Software Engineering</td>
-
-                    <td>18/09/2026</td>
-
-                    <td>25/09/2026</td>
-
-                    <td>Borrowed</td>
-
-                </tr>
-
-            </tbody>
-
-        </table>
+    </section>
 
 
-        <h3>Return Process</h3>
+    <!-- RETURN PROCESS -->
+    <section class="content">
 
-        <div class="flow">
+        <h2>↩️ Return Process</h2>
 
-            <div class="step">
-                📖 Return Book
+        <div class="process">
+
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div>📖</div>
+                <strong>Return Book</strong>
             </div>
 
-            <div class="arrow">
-                →
+            <div class="process-arrow">→</div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div>🔎</div>
+                <strong>Check Record</strong>
             </div>
 
-            <div class="step">
-                🔎 Check Record
+            <div class="process-arrow">→</div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div>📅</div>
+                <strong>Check Due Date</strong>
             </div>
 
-            <div class="arrow">
-                →
+            <div class="process-arrow">→</div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div>💰</div>
+                <strong>Calculate Fine</strong>
             </div>
 
-            <div class="step">
-                📅 Check Due Date
-            </div>
+            <div class="process-arrow">→</div>
 
-            <div class="arrow">
-                →
-            </div>
-
-            <div class="step">
-                💰 Calculate Fine
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-            <div class="step">
-                ✅ Update Record
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div>✅</div>
+                <strong>Update Record</strong>
             </div>
 
         </div>
@@ -223,13 +205,8 @@
 
 
 <footer>
-
-    <p>
-        Library Management System © 2026
-    </p>
-
+    <p>Library Management System © 2026</p>
 </footer>
 
 </body>
-
 </html>
