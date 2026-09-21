@@ -1,15 +1,108 @@
-library-management-system
-│
-├── index.html
-├── books.html
-├── members.html
-├── borrowing.html
-├── reservations.html
-├── fines.html
-├── reports.html
-│
-├── css
-│   └── style.css
-│
-└── js
-    └── script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>📚 Library Management System</h1>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrowing.html">Borrowing</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="fines.html">Fines</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h2>Library Management System</h2>
+        <p>
+            Manage books, members, borrowing, reservations and fines
+            in one centralized system.
+        </p>
+
+        <a href="books.html" class="button">
+            Explore Books
+        </a>
+    </section>
+
+    <section class="dashboard">
+
+        <div class="card">
+            <h3>📚 Total Books</h3>
+            <p>1,250</p>
+        </div>
+
+        <div class="card">
+            <h3>👥 Total Members</h3>
+            <p>320</p>
+        </div>
+
+        <div class="card">
+            <h3>📖 Borrowed Books</h3>
+            <p>145</p>
+        </div>
+
+        <div class="card">
+            <h3>⚠️ Overdue Books</h3>
+            <p>18</p>
+        </div>
+
+    </section>
+
+    <section class="content">
+        <h2>System Functions</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>📚 Book Management</h3>
+                <p>
+                    Add, update, delete and search books.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🔄 Borrow & Return</h3>
+                <p>
+                    Manage borrowing records and return dates.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>🔖 Reservations</h3>
+                <p>
+                    Reserve books that are currently unavailable.
+                </p>
+            </div>
+
+            <div class="feature">
+                <h3>💰 Fine Management</h3>
+                <p>
+                    Calculate and manage overdue fines.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Library Management System © 2026</p>
+</footer>
+
+</body>
+</html>
