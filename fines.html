@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fine Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>📚 Library Management System</h1>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrowing.html">Borrowing</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="fines.html">Fines</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- PAGE INTRODUCTION -->
+
+    <section class="content">
+
+        <h2>💰 Fine Management</h2>
+
+        <p>
+            Calculate, manage and track overdue fines for library members.
+        </p>
+
+    </section>
+
+
+    <!-- FINE PROCESS -->
+
+    <section class="content">
+
+        <h2>Fine Management Process</h2>
+
+        <div class="fine-process">
+
+            <div class="fine-step">
+
+                <div class="fine-number">1</div>
+
+                <div class="fine-icon">📖</div>
+
+                <strong>Check Return Date</strong>
+
+            </div>
+
+
+            <div class="fine-arrow">→</div>
+
+
+            <div class="fine-step">
+
+                <div class="fine-number">2</div>
+
+                <div class="fine-icon">📅</div>
+
+                <strong>Check Overdue Days</strong>
+
+            </div>
+
+
+            <div class="fine-arrow">→</div>
+
+
+            <div class="fine-step">
+
+                <div class="fine-number">3</div>
+
+                <div class="fine-icon">💰</div>
+
+                <strong>Calculate Fine</strong>
+
+            </div>
+
+
+            <div class="fine-arrow">→</div>
+
+
+            <div class="fine-step">
+
+                <div class="fine-number">4</div>
+
+                <div class="fine-icon">💳</div>
+
+                <strong>Record Payment</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINE RECORDS -->
+
+    <section class="content">
+
+        <h2>📋 Fine Records</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Fine ID</th>
+
+                        <th>Member ID</th>
+
+                        <th>Borrowing ID</th>
+
+                        <th>Overdue Days</th>
+
+                        <th>Fine Amount</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>F001</td>
+
+                        <td>M003</td>
+
+                        <td>BR003</td>
+
+                        <td>3</td>
+
+                        <td>$3.00</td>
+
+                        <td>
+                            <span class="fine-status unpaid">
+                                Unpaid
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>F002</td>
+
+                        <td>M002</td>
+
+                        <td>BR002</td>
+
+                        <td>2</td>
+
+                        <td>$2.00</td>
+
+                        <td>
+                            <span class="fine-status paid">
+                                Paid
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>F003</td>
+
+                        <td>M005</td>
+
+                        <td>BR004</td>
+
+                        <td>1</td>
+
+                        <td>$1.00</td>
+
+                        <td>
+                            <span class="fine-status unpaid">
+                                Unpaid
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>F004</td>
+
+                        <td>M001</td>
+
+                        <td>BR001</td>
+
+                        <td>5</td>
+
+                        <td>$5.00</td>
+
+                        <td>
+                            <span class="fine-status paid">
+                                Paid
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINE SUMMARY -->
+
+    <section class="content">
+
+        <h2>Fine Summary</h2>
+
+        <div class="fine-summary">
+
+            <div class="fine-card">
+
+                <h3>💰 Total Fines</h3>
+
+                <p>$11.00</p>
+
+            </div>
+
+
+            <div class="fine-card">
+
+                <h3>⚠️ Unpaid Fines</h3>
+
+                <p>$4.00</p>
+
+            </div>
+
+
+            <div class="fine-card">
+
+                <h3>✅ Paid Fines</h3>
+
+                <p>$7.00</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>Library Management System © 2026</p>
+
+</footer>
+
+</body>
+
+</html>
