@@ -637,3 +637,57 @@ footer {
     }
 
 }
+
+/* =====================================================
+   DASHBOARD INTERACTIVE CARDS
+   ===================================================== */
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link .card {
+    transition: 0.2s;
+    height: 100%;
+}
+
+.card-link:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #0003;
+    border: 1px solid #1976b8;
+}
+
+.card-link .card span {
+    color: #1976b8;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   INTERACTIVE FEATURE CARDS
+   ===================================================== */
+
+.feature-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.feature-link .feature {
+    height: 100%;
+    transition: 0.2s;
+}
+
+.feature-link:hover .feature {
+    transform: translateY(-5px);
+    border-color: #1976b8;
+    box-shadow: 0 6px 15px #0002;
+}
+
+.feature-link .feature strong {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1976b8;
+}
