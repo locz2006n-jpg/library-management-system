@@ -111,3 +111,51 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.search-box button {
+    background: #1976b8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #0b5a8f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #0b2d4d;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f4f7fb;
+}
