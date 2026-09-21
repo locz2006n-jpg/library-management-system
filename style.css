@@ -328,9 +328,6 @@ tr:hover {
     color: #1976b8;
 }
 
-
-/* Reservation Status */
-
 .reservation-status {
     display: inline-block;
     padding: 6px 12px;
@@ -354,9 +351,6 @@ tr:hover {
     color: #15803d;
 }
 
-
-/* Reservation Information */
-
 .reservation-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -374,9 +368,6 @@ tr:hover {
 .info-box h3 {
     color: #0b5a8f;
 }
-
-
-/* Mobile */
 
 @media (max-width: 900px) {
 
