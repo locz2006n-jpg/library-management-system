@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Borrowing - Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>📚 Library Management System</h1>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrowing.html">Borrowing</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="fines.html">Fines</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="content">
+
+        <h2>🔄 Borrowing Management</h2>
+
+        <p>
+            Manage book borrowing and returning records.
+        </p>
+
+
+        <h3>Borrowing Process</h3>
+
+        <div class="flow">
+
+            <div class="step">
+                👤 Check Member
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                📚 Check Book
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                ✅ Check Availability
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                📝 Create Record
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                📅 Set Due Date
+            </div>
+
+        </div>
+
+
+        <h3>Borrowing Records</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Borrowing ID</th>
+                    <th>Member ID</th>
+                    <th>Book</th>
+                    <th>Borrow Date</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr>
+
+                    <td>BR001</td>
+
+                    <td>M001</td>
+
+                    <td>Database System</td>
+
+                    <td>15/09/2026</td>
+
+                    <td>22/09/2026</td>
+
+                    <td>Borrowed</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>BR002</td>
+
+                    <td>M002</td>
+
+                    <td>Java Programming</td>
+
+                    <td>12/09/2026</td>
+
+                    <td>19/09/2026</td>
+
+                    <td>Returned</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>BR003</td>
+
+                    <td>M003</td>
+
+                    <td>Computer Networks</td>
+
+                    <td>10/09/2026</td>
+
+                    <td>17/09/2026</td>
+
+                    <td>Overdue</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>BR004</td>
+
+                    <td>M005</td>
+
+                    <td>Software Engineering</td>
+
+                    <td>18/09/2026</td>
+
+                    <td>25/09/2026</td>
+
+                    <td>Borrowed</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+        <h3>Return Process</h3>
+
+        <div class="flow">
+
+            <div class="step">
+                📖 Return Book
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                🔎 Check Record
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                📅 Check Due Date
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                💰 Calculate Fine
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+            <div class="step">
+                ✅ Update Record
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Library Management System © 2026
+    </p>
+
+</footer>
+
+</body>
+
+</html>
