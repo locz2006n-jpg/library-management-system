@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Use Cases - Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📚 Library Management System</h1>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrowing.html">Borrowing</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="fines.html">Fines</a>
+        <a href="reports.html">Reports</a>
+        <a href="project.html">Project</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="usecases.html">Use Cases</a>
+        <a href="activities.html">Activities</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="content">
+
+        <h2>🔗 Library Management System – Use Case Diagram</h2>
+
+        <p>
+            The system has three main actors:
+            Member, Librarian and Administrator.
+        </p>
+
+
+        <div class="usecase-grid">
+
+            <div class="actor-box">
+
+                <h3>👤 Member</h3>
+
+                <ul>
+                    <li>Login</li>
+                    <li>Search Book</li>
+                    <li>View Book Details</li>
+                    <li>Borrow Book</li>
+                    <li>Return Book</li>
+                    <li>Reserve Book</li>
+                    <li>View Borrowing History</li>
+                </ul>
+
+            </div>
+
+
+            <div class="actor-box">
+
+                <h3>👩‍💼 Librarian</h3>
+
+                <ul>
+                    <li>Manage Books</li>
+                    <li>Manage Members</li>
+                    <li>Manage Borrowing</li>
+                    <li>Manage Reservations</li>
+                    <li>Calculate Fine</li>
+                    <li>Pay Fine</li>
+                    <li>Generate Reports</li>
+                </ul>
+
+            </div>
+
+
+            <div class="actor-box">
+
+                <h3>🧑‍💻 Administrator</h3>
+
+                <ul>
+                    <li>Login</li>
+                    <li>Manage User Accounts</li>
+                    <li>Generate Reports</li>
+                    <li>Send Notifications</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="content">
+
+        <h2>🔗 Main Use Cases</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>🔐 Login</h3>
+                <p>User authenticates to access the system.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🔎 Search Book</h3>
+                <p>Member searches for available books.</p>
+            </div>
+
+            <div class="feature">
+                <h3>📖 Borrow Book</h3>
+                <p>Member borrows an available book.</p>
+            </div>
+
+            <div class="feature">
+                <h3>↩️ Return Book</h3>
+                <p>Member returns a borrowed book.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🔖 Reserve Book</h3>
+                <p>Member reserves an unavailable book.</p>
+            </div>
+
+            <div class="feature">
+                <h3>💰 Calculate Fine</h3>
+                <p>System calculates overdue fines.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="content">
+
+        <h2>🔄 Use Case Relationships</h2>
+
+        <div class="flow">
+
+            <div class="step">
+                👤
+                <strong>Member</strong>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                🔎
+                <strong>Search Book</strong>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                📖
+                <strong>Borrow Book</strong>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                ↩️
+                <strong>Return Book</strong>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                💰
+                <strong>Calculate Fine</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>Library Management System © 2026</p>
+
+</footer>
+
+</body>
+</html>
