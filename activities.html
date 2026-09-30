@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Activity Diagrams - Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📚 Library Management System</h1>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="members.html">Members</a>
+        <a href="borrowing.html">Borrowing</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="fines.html">Fines</a>
+        <a href="reports.html">Reports</a>
+        <a href="project.html">Project</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="usecases.html">Use Cases</a>
+        <a href="activities.html">Activities</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <!-- BORROW -->
+
+    <section class="content">
+
+        <h2>📖 Activity Diagram – Borrow Book</h2>
+
+        <div class="activity-flow">
+
+            <div class="activity-step">▶️ Start</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">👤 Member requests a book</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📚 Check book availability</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">❓ Is the book available?</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📝 Create borrowing record</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📅 Set due date</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">✅ Confirm borrowing</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">⏹️ End</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RETURN -->
+
+    <section class="content">
+
+        <h2>↩️ Activity Diagram – Return Book</h2>
+
+        <div class="activity-flow">
+
+            <div class="activity-step">▶️ Start</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📕 Member returns book</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">🔎 Check borrowing record</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📅 Check due date</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">❓ Is the book overdue?</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">💰 Calculate fine if necessary</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📝 Update borrowing record</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">✅ Complete return</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">⏹️ End</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION -->
+
+    <section class="content">
+
+        <h2>🔖 Activity Diagram – Reserve Book</h2>
+
+        <div class="activity-flow">
+
+            <div class="activity-step">▶️ Start</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">👤 Member requests reservation</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📚 Check book status</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">❓ Is the book unavailable?</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">🔖 Create reservation</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">📢 Notify member</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">✅ Reservation completed</div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="activity-step">⏹️ End</div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>Library Management System © 2026</p>
+
+</footer>
+
+</body>
+</html>
