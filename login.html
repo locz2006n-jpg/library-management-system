@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <div class="login-logo">📚</div>
+
+            <h1>Library Management System</h1>
+
+            <!-- LOGIN -->
+            <div id="loginSection">
+
+                <h2>Welcome Back!</h2>
+
+                <p class="login-description">
+                    Login to access the Library Management System.
+                </p>
+
+                <form id="loginForm">
+
+                    <label for="loginUsername">Username</label>
+
+                    <input
+                        type="text"
+                        id="loginUsername"
+                        placeholder="Enter your username"
+                        required
+                    >
+
+                    <label for="loginPassword">Password</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                    <button type="submit" class="login-button">
+                        Login
+                    </button>
+
+                    <p id="loginMessage"></p>
+
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <a href="#" id="showRegister">Register</a>
+                </p>
+
+                <div class="demo-account">
+                    <strong>Demo Account</strong>
+                    <br>
+                    Username: admin
+                    <br>
+                    Password: 123456
+                </div>
+
+            </div>
+
+
+            <!-- REGISTER -->
+            <div id="registerSection" style="display: none;">
+
+                <h2>Create Account</h2>
+
+                <p class="login-description">
+                    Register a new library account.
+                </p>
+
+                <form id="registerForm">
+
+                    <label for="registerName">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                    <label for="registerUsername">Username</label>
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        placeholder="Create a username"
+                        required
+                    >
+
+                    <label for="registerEmail">Email</label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="registerPassword">Password</label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                    <label for="confirmPassword">Confirm Password</label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                    <button type="submit" class="login-button">
+                        Register
+                    </button>
+
+                    <p id="registerMessage"></p>
+
+                </form>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <a href="#" id="showLogin">Login</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================
+           SWITCH LOGIN / REGISTER
+        ========================= */
+
+        const loginSection = document.getElementById("loginSection");
+        const registerSection = document.getElementById("registerSection");
+
+        document.getElementById("showRegister").addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            loginSection.style.display = "none";
+            registerSection.style.display = "block";
+
+        });
+
+
+        document.getElementById("showLogin").addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            registerSection.style.display = "none";
+            loginSection.style.display = "block";
+
+        });
+
+
+        /* =========================
+           LOGIN
+        ========================= */
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+
+            const message = document.getElementById("loginMessage");
+
+
+            /* Default admin account */
+
+            if (username === "admin" && password === "123456") {
+
+                message.textContent = "Login successful!";
+                message.style.color = "green";
+
+                setTimeout(function() {
+
+                    window.location.href = "index.html";
+
+                }, 800);
+
+                return;
+            }
+
+
+            /* Check registered account */
+
+            const users = JSON.parse(localStorage.getItem("libraryUsers")) || [];
+
+            const user = users.find(function(account) {
+
+                return account.username === username &&
+                       account.password === password;
+
+            });
+
+
+            if (user) {
+
+                message.textContent = "Login successful!";
+                message.style.color = "green";
+
+                setTimeout(function() {
+
+                    window.location.href = "index.html";
+
+                }, 800);
+
+            } else {
+
+                message.textContent = "Invalid username or password.";
+                message.style.color = "red";
+
+            }
+
+        });
+
+
+        /* =========================
+           REGISTER
+        ========================= */
+
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("registerName").value;
+            const username = document.getElementById("registerUsername").value;
+            const email = document.getElementById("registerEmail").value;
+            const password = document.getElementById("registerPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            const message = document.getElementById("registerMessage");
+
+
+            /* Check password */
+
+            if (password !== confirmPassword) {
+
+                message.textContent = "Passwords do not match.";
+                message.style.color = "red";
+
+                return;
+            }
+
+
+            /* Get existing users */
+
+            const users = JSON.parse(localStorage.getItem("libraryUsers")) || [];
+
+
+            /* Check username */
+
+            const existingUser = users.find(function(account) {
+
+                return account.username === username;
+
+            });
+
+
+            if (existingUser) {
+
+                message.textContent = "Username already exists.";
+                message.style.color = "red";
+
+                return;
+            }
+
+
+            /* Create new account */
+
+            const newUser = {
+
+                name: name,
+                username: username,
+                email: email,
+                password: password
+
+            };
+
+
+            users.push(newUser);
+
+            localStorage.setItem("libraryUsers", JSON.stringify(users));
+
+
+            message.textContent = "Registration successful! You can now login.";
+            message.style.color = "green";
+
+
+            /* Clear form */
+
+            document.getElementById("registerForm").reset();
+
+
+            /* Go back to Login */
+
+            setTimeout(function() {
+
+                registerSection.style.display = "none";
+                loginSection.style.display = "block";
+
+            }, 1200);
+
+        });
+
+    </script>
+
+</body>
+</html>
